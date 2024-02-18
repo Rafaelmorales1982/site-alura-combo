@@ -1,0 +1,202 @@
+/*Fonts importadas*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+
+/*Criando variáveis para utilizar no código css*/
+:root {
+    --branco-principal:#ffffff;
+    --cinza-secundaria:#c0c0c0;
+    --botao-azul:#167BF7;
+    --cor-de-fundo: #00030c;
+    --fonte-principal: 'Inter', sans-serif;
+    --botao-azul--efeito: #3c92fa;
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*----------------container principal --------------------*/
+/*inserindo uma imagem  de fundo utilizando o css*/
+.principal {
+    background-image: url("./img/Background.png");
+    background-repeat: no-repeat; /*não deixa a imagem de fundo repetir*/
+    background-size: contain; /*a imagem fica toda dimensionada no container*/
+    align-items: center;
+    text-align: center;
+}
+
+.container {
+    height: 100vh;/*colocando 100% de altura para a imagem de fundo aparecer*/
+    display: grid;
+    grid-template-columns: 50% 50%;/*dividindo em duas colunas*/
+}
+
+.container__botao{
+    background-color:var(--botao-azul) ;
+    border-radius: 8px;
+    padding: 1em;/*16px*/
+    color: var(--branco-principal);
+    display: block;
+    text-decoration: none;
+    margin-bottom: 1em;/*16px*/
+}
+
+.botao_secundario {
+    background-color: transparent;
+    border: 2px solid var(--branco-principal) ;
+}
+
+.container__aviso {
+    font-size: 12px;
+    color: var(--cinza-secundaria);
+}
+
+.container__titulo {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.container__imagem {
+    /* 16px superior 0 direito 32px inferior 0 esquerdo*/
+    margin: 1em 0 2em 0;
+}
+
+.container__caixa {
+    /*superior e inferior e direita e esquerda*/
+    margin: 0 6em;/*96px  */
+}
+
+/*--------------------------------Seção Secundária--------------------*/
+
+.secundario__imagem {
+    width: 80%;
+}
+
+
+.secundario {
+    align-items: center;/*centralizando os elementos dentro do container*/
+    margin: 0 10em;/*0 superior e inferior  160px  esquerda e direita*/
+}
+
+.descricao__titulo {
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--branco-principal);
+    margin-bottom: 0.1em;/*1.6px*/
+}
+
+.descricao__texto {
+    color: var(--cinza-secundaria);
+    font-size: 18px;
+}
+
+/*----------Seção Secundário parte 2 utilizando todas as propriedades do css secundario--------------*/
+.secundario__botao {
+    display: inline-block;/*cria um linha e ele ocupa só espaço dele com seu texto*/
+    margin-top: 1em;/*16px*/
+}
+
+.container__descricao {
+    padding: 2em;/*32px*/
+}
+
+
+/*------------Seção Secundária parte 3 ----------------*/
+.notebook_imagem {
+    padding-left: 2em;
+}
+.bloco_texto{
+    padding-right: 3.5em;
+}
+
+
+/*------------Seção de dispositivos--------------*/
+.dispositivos__lista {
+    display: flex;/*alinhar os itens lado a lado*/
+    justify-content: center;/*alinha os elementos ao centro*/
+    list-style-type: none;
+    margin: 5em 0;/*80px superior e inferior 0 direita e esquerda*/
+}
+
+.dispositivos{
+    text-align: center;/*centraliza o texto*/
+}
+
+
+.dispositivos__titulo{
+    font-size: 48px;
+    color: var(--branco-principal);
+}
+
+.lista__item{
+    font-size: 32px;
+    color: var(--branco-principal);
+}
+
+/*--------Footer Rodapé ---------------*/
+.rodape{
+    text-align: center;
+}
+
+.rodape__logo{
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+a {
+    text-decoration: none;
+    color: var(--cinza-secundaria);
+}
+
+.rodape__link a:hover{
+    color: var(--botao-azul);
+}
+
+.rodape__link a:active{
+    color: var(--branco-principal);
+}
+
+.rodape__lista {
+   display: flex;
+   list-style-type: none;
+   justify-content: center;
+   text-align: center;
+
+}
+
+.rodape__link{
+    margin: 0 0.7em;/*0 superior e inferior 0.7em direita e esquerda*/
+}
+
+.rodape__texto{
+    margin-top: 1em;
+    color: var(--cinza-secundaria);
+    font-size: 16px;
+ 
+}
+
+.texto_final{
+    margin-bottom: 5em;
+    margin: 0 0.5em;
+    margin-top: 1em;
+
+}
+
+/*trocando cor do botão ao colocar mouse*/
+
+.container__botao:hover{
+ background-color: var(--botao-azul--efeito);
+ color: var(--cor-de-fundo);
+}
